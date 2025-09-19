@@ -10,6 +10,6 @@ Sub LimparColunas()
     Dim lastRow As Long
     lastRow = ws.Cells(ws.Rows.Count, "A").End(xlUp).Row
 
-    ' Limpa da linha 3 até a última linha usada, das colunas A até AR
+    ' Limpa da linha 2 até a última linha usada, das colunas A até AR
     ws.Range("A2:AR" & lastRow).ClearContents
 End Sub
