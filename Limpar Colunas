@@ -1,0 +1,15 @@
+Sub LimparColunas()
+    Dim ws As Worksheet
+    Set ws = ThisWorkbook.Sheets("Base Relatório") ' Nome da aba
+
+    ' Remove AutoFilter if active
+    If ws.AutoFilterMode Then
+        ws.AutoFilterMode = False
+    End If
+
+    Dim lastRow As Long
+    lastRow = ws.Cells(ws.Rows.Count, "A").End(xlUp).Row
+
+    ' Limpa da linha 3 até a última linha usada, das colunas A até AR
+    ws.Range("A2:AR" & lastRow).ClearContents
+End Sub
